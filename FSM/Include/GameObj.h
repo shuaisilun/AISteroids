@@ -9,7 +9,13 @@
 #include <list>
 
 #define NO_LIFE_TIMER 99999
+
 #define AI_MAX_SPEED_TRY  80.0f
+#define AI_DANGEROUS_SPEED 90.0f
+#define AngularStepAcceleration 0.0174533
+#define MaxAngularSpeed 0.0872665
+
+#define AI_APPROACH_DIST 250
 
 class GameObj
 {
@@ -35,6 +41,15 @@ public:
     cyclone::Vector3 getPosition() { return body.getPosition(); }
     void addRotation(cyclone::Vector3 rotation) { body.addRotation(rotation); }
 
+	// #Allen
+	void rotateVelocity(float angularSpeed);
+	void rotateObj(float angularSpeed);
+	void realRotate(float radians);
+	float decAngVelocity(float angVelocity, float decAcc);
+
+	// #Allen debug
+	void printPosition();
+
     enum//collision flags/object types
     {
         OBJ_NONE = 0x00000001,
@@ -51,6 +66,7 @@ public:
     cyclone::Vector3 m_axis;   
     float  m_angle;  
     float  m_angVelocity;
+	float  m_cruiseTurnAng;
     bool  m_active; 
     bool  m_explodes; 
     float  m_size;

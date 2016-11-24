@@ -27,8 +27,13 @@ public:
     void ThrustReverse(){m_revThrust=true;m_thrust=false;}
     void ThrustOff()    {m_thrust=false;m_revThrust=false;}
     void TurnLeft(); 
-    void TurnRight(); 
-    void StopTurn() {m_angVelocity =    0.0f;}
+	void TurnLeft(float);		// used by AI controlled ship #Allen
+    void TurnRight();			
+	void TurnRight(float);		// used by AI controlled ship #Allen
+	void AngleThrustOn() { m_angleThust = true; }
+	void AngleThrustOff() { m_angleThust = false; }
+
+	void StopTurn() { m_angleThust = false; }
     void Stop();
     void Hyperspace();
     void setDestination(const cyclone::Vector3& destination, float speed);
@@ -58,13 +63,18 @@ public:
     virtual void Shoot(float angle = -1);
     virtual float GetClosestGunAngle(float angle);
     virtual float GetClosestGunApproachAngle(float angle);
-        
+
     //data
     Control* m_control;
+
+	//#Allen
+	void rotateShip(float);
+
 protected:
     int m_activeBulletCount;
     bool m_thrust;
     bool m_revThrust;
+	bool m_angleThust;
     bool m_agThrust;
     bool m_tractor;
     int m_shotPowerLevel;

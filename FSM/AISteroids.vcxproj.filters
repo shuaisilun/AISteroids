@@ -13,6 +13,12 @@
     <Filter Include="Source Files\AI">
       <UniqueIdentifier>{b396929b-7dd1-4c6e-aa43-4527afce54c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\AI\PathFinding">
+      <UniqueIdentifier>{617bc13b-1e18-47a0-8ee8-a5ce0a3c2175}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AI\PathFinding">
+      <UniqueIdentifier>{a172297e-2c51-4f72-9e8a-885571cd926a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\Ast.h">
@@ -84,6 +90,12 @@
     <ClInclude Include="Include\StateMassiveAttack.h">
       <Filter>Header Files\AI</Filter>
     </ClInclude>
+    <ClInclude Include="StateHunting.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="PathNode.h">
+      <Filter>Header Files\AI\PathFinding</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Ast.cpp">
@@ -145,6 +157,12 @@
     </ClCompile>
     <ClCompile Include="Source\StateIdle.cpp">
       <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="StateHunting.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="PathFinding.cpp">
+      <Filter>Source Files\AI\PathFinding</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

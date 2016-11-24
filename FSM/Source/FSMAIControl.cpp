@@ -8,7 +8,9 @@
 #include "StateEvade.h"
 #include "StateGetPowerup.h"
 #include "StateIdle.h"
+#include "C:\Users\shuaisilun\Documents\AISeroids\AISteroids\FSM\StateHunting.h"
 #include "Target.h"
+
 
 using namespace cyclone;
 
@@ -20,13 +22,14 @@ AIControl(ship)
     m_machine = new FSMMachine(FSM_MACH_MAINSHIP,this);
     StateApproach* approach = new StateApproach(this);
     m_machine->AddState(approach);
-    //m_machine->AddState(new StateAttack(this));
-    //m_machine->AddState(new StateMassiveAttack(this));
+    m_machine->AddState(new StateAttack(this));
+    m_machine->AddState(new StateMassiveAttack(this));
     m_machine->AddState(new StateEvade(this));
-    //m_machine->AddState(new StateGetPowerup(this));
+    m_machine->AddState(new StateGetPowerup(this));
+	m_machine->AddState(new StateHunting(this));
     StateIdle* idle = new StateIdle(this);
     m_machine->AddState(idle);
-    m_machine->SetDefaultState(approach);
+    m_machine->SetDefaultState(idle);
     m_machine->Reset();
 }
 
@@ -40,6 +43,7 @@ void FSMAIControl::Init()
     m_safetyRadius    = 15.0f;
     m_maxSpeed        = AI_MAX_SPEED_TRY;///Game.m_timeScale;
     m_asteroidCount   = INT_MAX;
+	m_waveNumber = Game.m_waveNumber;
     
     if(!m_target)
     {
@@ -69,6 +73,9 @@ void FSMAIControl::UpdatePerceptions(float dt)
         m_safetyRadius = 30.0f;
     else
         m_safetyRadius = 15.0f;
+
+	//Get the wave number for Idle state to decide if go hunting 
+	m_waveNumber = Game.m_waveNumber;
     
     //store closest asteroid and powerup
     m_nearestAsteroid = Game.GetClosestGameObj(m_ship,GameObj::OBJ_ASTEROID);

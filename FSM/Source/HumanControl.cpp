@@ -128,6 +128,7 @@ void SpecialKeyUp(int key, int x, int y)
     switch (key) 
     {
     case GLUT_KEY_RIGHT: 
+		Game.UseControl(GameSession::CONTROL_STOP_TURN);
     case GLUT_KEY_LEFT: 
         Game.UseControl(GameSession::CONTROL_STOP_TURN);  
         break;

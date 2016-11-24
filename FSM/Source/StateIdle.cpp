@@ -21,6 +21,9 @@ int StateIdle::CheckTransitions()
 
     if(parent->m_nearestAsteroid)
     {
+		if (parent->m_waveNumber < MAX_HUNTING_LEVEL && parent->m_nearestAsteroid)
+			return FSM_STATE_HUNTING;
+
         if(parent->m_nearestAsteroidDist > APPROACH_DIST)
             return FSM_STATE_APPROACH;
         else

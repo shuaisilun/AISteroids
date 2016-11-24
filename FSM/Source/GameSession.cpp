@@ -320,7 +320,7 @@ void GameSession::StartGame()
 {
     m_mainShip = NULL;
     m_powerupTimer = 0.2f;
-    m_waveNumber = 1;
+    m_waveNumber = START_GAME_LEVEL;
     m_numLives = 3;
     m_numAsteroids  = 0;
     m_respawnTimer  = -1;

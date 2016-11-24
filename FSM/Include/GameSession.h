@@ -18,6 +18,8 @@ using namespace std;
 
 #define INITIAL_WORLD_SIZE 1024
 
+#define START_GAME_LEVEL 1
+
 typedef std::list<GameObj*> GameObjectList;
 
 class GameSession

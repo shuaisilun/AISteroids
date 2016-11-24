@@ -33,9 +33,17 @@ void Ship::Init()
     m_activeBulletCount  = 0;
     m_agThrust           = false;
     m_tractor            = false;
+	m_angleThust		 = false;
     m_agNorm             = Vector3::zero();
     m_tractorNorm        = Vector3::zero();
     m_shotPowerLevel     = 0;
+	m_cruiseTurnAng = 0;
+}
+
+// a bit redundant but necessary for further development
+void Ship::rotateShip(float radians)
+{
+	realRotate(radians);
 }
 
 //---------------------------------------------------------
@@ -55,9 +63,21 @@ void Ship::Update(float dt)
         na *= -1;
         setVelocity(getVelocity() + na);
     }
+	if (m_cruiseTurnAng != 0)
+	{
+		rotateShip(m_cruiseTurnAng);
+		m_cruiseTurnAng = 0;
+
+	} else if (m_angVelocity != 0) {
+		if (!m_angleThust)
+			m_angVelocity = decAngVelocity(m_angVelocity, AngularStepAcceleration);
+
+		rotateShip(m_angVelocity);
+	} 
 
     if(m_agThrust)
         AGMove(dt);
+	
     m_agNorm.x = 0.0f;
     m_agNorm.y = 0.0f;
     m_agNorm.z = 0.0f;
@@ -67,7 +87,10 @@ void Ship::Update(float dt)
     
     if(m_invincibilityTimer > 0)
         m_invincibilityTimer -= dt;
+
     GameObj::Update(dt);
+
+	GameObj::printPosition();
 }
 
 //---------------------------------------------------------
@@ -325,13 +348,27 @@ float Ship::GetClosestGunApproachAngle(float angle)
 //---------------------------------------------------------
 void Ship::TurnLeft()
 {
-    m_angVelocity =  MAX(120.0f,320.0f / Game.m_timeScale);
+	m_angleThust = true;
+	float angVelocity = m_angVelocity + AngularStepAcceleration;
+    m_angVelocity =  MIN(angVelocity,MaxAngularSpeed);
+}
+
+void Ship::TurnLeft(float radians)
+{
+	m_cruiseTurnAng = radians;
 }
 
 //---------------------------------------------------------
 void Ship::TurnRight()
 {
-    m_angVelocity = MIN(-120.0f,-320.0f / Game.m_timeScale);
+	m_angleThust = true;
+	float angVelocity = m_angVelocity - AngularStepAcceleration;
+	m_angVelocity = MAX(angVelocity, -1 * MaxAngularSpeed);
+}
+
+void Ship::TurnRight(float radians)
+{
+	m_cruiseTurnAng = radians;
 }
 
 //---------------------------------------------------------

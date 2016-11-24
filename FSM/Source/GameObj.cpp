@@ -121,6 +121,68 @@ void GameObj::Explode()
             break;
     }
 }
+
+void GameObj::rotateVelocity(float radians)
+{
+	Vector3 velocity = body.getVelocity();
+
+	//float radians = 0.00174533; // test number 
+
+	velocity[0] = velocity[0] * cos(radians) - velocity[1] * sin(radians);
+	velocity[1] = velocity[0] * sin(radians) + velocity[1] * cos(radians);
+
+	body.setVelocity(velocity);
+}
+
+void GameObj::rotateObj(float radians)
+{
+	float degrees = radians * 180 / M_PI;
+	m_angle += degrees;
+	if (m_angle >= 360)
+		m_angle -= 360;
+	if (m_angle <= -360)
+		m_angle += 360;
+}
+
+void GameObj::realRotate(float radians)
+{
+	rotateVelocity(radians);
+	rotateObj(radians);
+}
+
+float GameObj::decAngVelocity(float angVelocity, float decAcc)
+{
+	float angV;
+	if (angVelocity > 0)
+	{
+		angV = angVelocity - decAcc;
+		if (angV < 0)
+			return 0;
+		return angV;
+	}
+	if (angVelocity < 0)
+	{
+		angV = angVelocity + decAcc;
+		if (angV > 0)
+			return 0;
+		return angV;
+	}
+	return 0;
+}
+
+void GameObj::printPosition() 
+{
+	float x = getPosition()[0];
+	float y = getPosition()[1];
+	float radious = (float) m_boundSphere.r;
+
+	x -= radious;
+	y -= radious;
+
+	glPrintf(COLOR_SILVER, x, y, 20,"(%f,%f)", x,y);
+}
+
+
 //---------------------------------------------------------
 Vector3 GameObj::UnitVectorFacing()
 {

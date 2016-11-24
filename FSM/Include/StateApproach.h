@@ -10,4 +10,7 @@ public:
     void Update(float dt);
     int CheckTransitions();
     void Exit();
+
+private:
+	
 };

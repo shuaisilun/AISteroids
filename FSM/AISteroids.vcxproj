@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -11,6 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="PathNode.h" />
+    <ClInclude Include="StateHunting.h" />
     <ClInclude Include="Include\AIControl.h" />
     <ClInclude Include="Include\Ast.h" />
     <ClInclude Include="Include\Bullet.h" />
@@ -48,6 +50,7 @@
     <ClInclude Include="Include\utility.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="PathFinding.cpp" />
     <ClCompile Include="Source\AIControl.cpp" />
     <ClCompile Include="Source\Ast.cpp" />
     <ClCompile Include="Source\asteroids.cpp" />
@@ -78,17 +81,19 @@
     </ClCompile>
     <ClCompile Include="Source\Target.cpp" />
     <ClCompile Include="Source\utility.cpp" />
+    <ClCompile Include="StateHunting.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A85AD287-CC1B-4A13-9BA6-987E134286AE}</ProjectGuid>
     <RootNamespace>AISteroids</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>

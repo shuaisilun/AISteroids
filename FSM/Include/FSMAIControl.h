@@ -7,6 +7,8 @@ class GameObj;
 
 #define POWERUP_SCAN_DIST 180.0f
 #define APPROACH_DIST     180.0f
+#define HUNTING_DIST	  250.0f
+#define MAX_HUNTING_LEVEL	  9
 
 class FSMAIControl: public AIControl
 {
@@ -28,8 +30,10 @@ public:
     bool        m_powerupNear;
     float       m_safetyRadius;
     float       m_maxSpeed;
+	int			m_waveNumber;
     
 protected:
     //data
     FSMMachine* m_machine;
+
 };
