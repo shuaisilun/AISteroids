@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{dd975e36-f843-4ae9-b160-fb424905fa97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3233eebc-96b3-4f5e-a2fd-38483a4d26d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AI">
+      <UniqueIdentifier>{b5198d48-e1ef-4008-abcf-4f8516d767ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AI">
+      <UniqueIdentifier>{b396929b-7dd1-4c6e-aa43-4527afce54c6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\Ast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Bullet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Control.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Exp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameSession.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\HumanControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Powerup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Ship.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Sphere3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Target.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\FSM.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\FSMAIControl.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\FSMMachine.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\FSMState.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\StateApproach.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\StateAttack.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\StateEvade.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\StateGetPowerup.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\StateIdle.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\AIControl.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\StateMassiveAttack.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Ast.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\asteroids.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Bullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Exp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameSession.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\HumanControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Powerup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Ship.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Target.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AIControl.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\FSMAIControl.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\FSMMachine.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StateApproach.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StateAttack.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StateEvade.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StateGetPowerup.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StateMassiveAttack.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StateIdle.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

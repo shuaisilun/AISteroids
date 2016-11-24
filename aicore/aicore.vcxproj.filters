@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\action.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\aicore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\aimath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\basesm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dectree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fuzzysm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\kinematic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\learning.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\location.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\markovsm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\primitives.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\qlearning.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rules.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\steering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\steerpipe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\timing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\aicore_precision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\action.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\aimath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\basesm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\dectree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\kinematic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\learning.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\location.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\markovsm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\qlearning.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\rules.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\steering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\steerpipe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\timing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
